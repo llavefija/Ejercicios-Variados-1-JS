@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Fondo y Recuadro</title>
+
+    <!-- Incluir Bootstrap desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados -->
+    <style>
+        .btn-red, .btn-green, .btn-blue, .btn-yellow, .btn-purple {
+            color: black;
+            border-radius: 50%; /* Hacer los botones redondos */
+            width: 50px; /* Tamaño del botón */
+            height: 50px; /* Tamaño del botón */
+        }
+
+        .btn-red {
+            background-color: #FF0000;
+        }
+        .btn-red:hover {
+            background-color: #CC0000;
+        }
+
+        .btn-green {
+            background-color: #28A745;
+        }
+        .btn-green:hover {
+            background-color: #218838;
+        }
+
+        .btn-blue {
+            background-color: #007BFF;
+        }
+        .btn-blue:hover {
+            background-color: #0069D9;
+        }
+
+        .btn-yellow {
+            background-color: #FFC107;
+        }
+        .btn-yellow:hover {
+            background-color: #E0A800;
+        }
+
+        .btn-purple {
+            background-color: #800080;
+        }
+        .btn-purple:hover {
+            background-color: #660066;
+        }
+
+        /* Estilo para el recuadro negro en la esquina derecha */
+        #recuadro {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5 text-center">
+        <h1>Elige un color para el fondo y el recuadro</h1>
+
+        <!-- Botones para cambiar el color del fondo -->
+        <div class="mt-4">
+            <button onclick="cambiarColor('red')" class="btn btn-red m-2">Rojo</button>
+            <button onclick="cambiarColor('green')" class="btn btn-green m-2">Verde</button>
+            <button onclick="cambiarColor('blue')" class="btn btn-blue m-2">Azul</button>
+            <button onclick="cambiarColor('yellow')" class="btn btn-yellow m-2">Amarillo</button>
+            <button onclick="cambiarColor('purple')" class="btn btn-purple m-2">Púrpura</button> 
+        </div>
+
+        <!-- Botones para cambiar el color del recuadro -->
+        <div class="mt-4">
+            <button onclick="cambiarRecuadroColor('red')" class="btn btn-red m-2">Rojo</button>
+            <button onclick="cambiarRecuadroColor('green')" class="btn btn-green m-2">Verde</button>
+            <button onclick="cambiarRecuadroColor('blue')" class="btn btn-blue m-2">Azul</button>
+            <button onclick="cambiarRecuadroColor('yellow')" class="btn btn-yellow m-2">Amarillo</button>
+            <button onclick="cambiarRecuadroColor('purple')" class="btn btn-purple m-2">Púrpura</button> 
+        </div>
+
+    </div>
+
+    <!-- El recuadro en la esquina derecha -->
+    <div id="recuadro"></div>
+
+    <!-- Incluir Bootstrap JavaScript desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Incluir el archivo de JavaScript externo -->
+    <script src="cambiarColorEspecifico.js"></script>
+
+</body>
+</html>
